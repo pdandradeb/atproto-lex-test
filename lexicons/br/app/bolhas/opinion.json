@@ -1,0 +1,31 @@
+{
+  "lexicon": 1,
+  "id": "br.app.bolhas.opinion",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "An opinion about a topic.",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["enabled", "text", "lang", "choice", "topic", "createdAt"],
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "text": { "type": "string" },
+          "lang": { "type": "string", "format": "language" },
+          "choice": {
+            "type": "string",
+            "default": "single",
+            "enum": ["single", "multiple"]
+          },
+          "topic": { "type": "ref", "ref": "br.app.bolhas.topic" },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Client-declared timestamp when this opinion was originally created."
+          }
+        }
+      }
+    }
+  }
+}

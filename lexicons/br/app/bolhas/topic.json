@@ -1,0 +1,25 @@
+{
+  "lexicon": 1,
+  "id": "br.app.bolhas.topic",
+  "defs": {
+    "main": {
+      "type": "record",
+      "description": "A topic that you can have an opinion about.",
+      "key": "tid",
+      "record": {
+        "type": "object",
+        "required": ["enabled", "text", "lang", "createdAt"],
+        "properties": {
+          "enabled": { "type": "boolean" },
+          "text": { "type": "string" },
+          "lang": { "type": "string", "format": "language" },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "Client-declared timestamp when this topic was originally created."
+          }
+        }
+      }
+    }
+  }
+}

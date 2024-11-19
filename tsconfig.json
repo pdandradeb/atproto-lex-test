@@ -1,0 +1,14 @@
+{
+  "include": ["**/*.ts"],
+  "exclude": ["atproto"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true
+  }
+}
