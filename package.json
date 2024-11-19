@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "typecheck": "tsc",
-    "lex-gen-api": "lex gen-api --yes ./app/generated/api ./lexicons/br/app/bolhas/*.json ./lexicons/com/atproto/repo/*.json",
+    "postinstall": "./scripts/postinstall.sh",
+    "lex-gen-api": "./scripts/gen-api.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,6 +18,7 @@
   },
   "devDependencies": {
     "@atproto/lex-cli": "^0.5.2",
+    "giget": "^1.2.3",
     "typescript": "^5.6.3"
   }
 }
